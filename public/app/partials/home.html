@@ -1,0 +1,13 @@
+    <h1 class="form-signin-heading text-muted">Cepdsap Menü</h1>
+    <button type="submit" class="btn btn-log btn-primary" ng-click="logout()">Güvenli Çıkış</button>
+    <div class="row"> <!-- Ana Menü ızgara -->
+        <div class="col-sm-5">
+            <div class="grid-menu clearfix">
+                <div class="grid-box" ng-repeat="menu in menus">
+                    <a style="outline: medium none;" hidefocus="true" ng-href="#/{{menu.url}}" class="boxed boxed-{{menu.color}}">
+                        <span>{{menu.title}}</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div> <!-- Ana Menü ızgara -->

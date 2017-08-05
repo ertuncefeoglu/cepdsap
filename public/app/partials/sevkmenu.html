@@ -1,0 +1,14 @@
+    <h1 class="form-signin-heading text-muted">Sevk İşlemleri</h1>
+    <button type="submit" class="btn btn-log btn-primary" ng-click="logout()">Güvenli Çıkış</button>
+    <div class="row">
+        <div class="col-sm-5">
+            <div class="grid-menu clearfix">
+                <div class="" ng-repeat="mekan in mekanlar">
+                    <a style="outline: medium none;" hidefocus="true" href="#/sevk/{{mekan.mekan_kodu}}" class="boxed boxed-{{mekan.sevk}}">
+                        <span>{{mekan.mekan_kodu}}</span>
+                    </a>
+                    <span>{{mekan.mekan_adi}}</span>
+                </div>
+            </div>
+        </div>
+    </div>

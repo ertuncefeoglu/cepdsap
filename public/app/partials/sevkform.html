@@ -1,0 +1,30 @@
+    <h1 class="form-signin-heading text-muted">Sevk Düzenleme</h1>
+    <button type="submit" class="btn btn-log btn-primary" ng-click="logout()">Güvenli Çıkış</button>
+    <div class="row">
+        <div class="col-sm-5">
+            <div class="grid-menu clearfix">
+                <form class="form-horizontal" role="form">
+                    <fieldset>
+                    <legend>Sevk Miktarı Düzenleme</legend>
+                        <div class="" ng-repeat="sevk in sevkler">
+                              <div class="form-group">
+                                <label for="sevk_miktari" class="col-sm-3 control-label">
+                                    <a style="outline: medium none;" hidefocus="true" href="#/sevk/{{sevk.malzeme_kodu}}" class="boxed boxed-{{sevk.sevk}}">
+                                        <span>{{sevk.malzeme_adi}}</span>
+                                    </a>
+                                </label>
+                                <div class="col-sm-9">
+                                  <input type="text" id="sevk_miktari" name="sevk_miktari" class="form-control" ng-model="sevk.sevk_miktari">
+                                </div>
+                              </div>
+                        </div>
+                    </fieldset>
+                    <div class="col-sm-offset-3 col-sm-9">
+                      <input type="submit" class="btn" value="İptal" ng-click="cancelForm()"/>
+                      <input type="submit" class="btn btn-primary" value="Kaydet" ng-click="submitForm()"/>
+                    </div>
+                </form>                    
+
+            </div>
+        </div>
+    </div>
